@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#121417</color>
+    <color name="surface_dark">#1E2228</color>
+    <color name="surface_border">#3A4048</color>
+    <color name="text_primary">#F2F4F7</color>
+    <color name="text_secondary">#9AA3AE</color>
+
+    <color name="accent">#4DA3FF</color>
+    <color name="found_green">#2E7D32</color>
+    <color name="found_green_bright">#4CAF50</color>
+    <color name="stop_red">#C62828</color>
+    <color name="warn_yellow">#F9A825</color>
+    <color name="warn_orange">#EF6C00</color>
+
+    <!-- Localizador: escala térmica quente/frio do sinal (frio -> travado) -->
+    <color name="signal_ink">#0A0E12</color>
+    <color name="signal_abyss">#0F2830</color>
+    <color name="signal_ember">#E9A21B</color>
+    <color name="signal_flare">#F0531F</color>
+    <color name="signal_lock">#14C77B</color>
+    <color name="signal_frost">#EDF4F6</color>
+    <color name="signal_haze">#7C8B92</color>
+</resources>

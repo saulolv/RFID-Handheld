@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Localizador RFID</string>
+
+    <!-- Splash -->
+    <string name="splash_connecting">Conectando ao leitor RFID…</string>
+    <string name="splash_failed">Falha ao conectar ao módulo RFID.\nVerifique se outro app não está usando o leitor.</string>
+    <string name="splash_retry">Tentar novamente</string>
+
+    <!-- Lista de itens -->
+    <string name="list_title">Lista de itens</string>
+    <string name="list_hint">Cole os EPCs, um por linha.\nFormato: EPC ou EPC,Nome do item</string>
+    <string name="list_save">Salvar lista</string>
+    <string name="list_clear">Limpar tudo</string>
+    <string name="list_go_scan">Ir para leitura →</string>
+    <string name="list_count">%1$d itens cadastrados</string>
+    <string name="list_saved">%1$d itens salvos</string>
+    <string name="list_invalid_lines">%1$d linha(s) inválida(s) ignorada(s): EPC deve ser hexadecimal com 8+ caracteres</string>
+    <string name="list_empty_warning">Nenhum EPC válido informado</string>
+    <string name="list_clear_confirm_title">Limpar tudo?</string>
+    <string name="list_clear_confirm_msg">Todos os itens cadastrados serão removidos.</string>
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_confirm">Confirmar</string>
+
+    <!-- Checklist -->
+    <string name="check_title">Leitura de estoque</string>
+    <string name="check_progress">ENCONTRADOS %1$d / %2$d</string>
+    <string name="check_others">Outras tags lidas: %1$d</string>
+    <string name="check_start">▶ INICIAR LEITURA</string>
+    <string name="check_stop">⏸ PARAR</string>
+    <string name="check_all_found">✔ Todos os itens encontrados!</string>
+    <string name="check_reset">Resetar status</string>
+    <string name="check_filter_pending">Ver só pendentes</string>
+    <string name="check_filter_all">Ver todos</string>
+    <string name="check_found_badge">✓ ENCONTRADO</string>
+    <string name="check_hold_hint">Toque longo em um item para localizá-lo</string>
+
+    <!-- Home -->
+    <string name="home_search">🔎 Procurar um item</string>
+    <string name="home_search_sub">Encontre uma etiqueta específica varrendo o ambiente</string>
+    <string name="home_checklist">☑ Conferir lista</string>
+    <string name="home_checklist_sub">Marque vários itens de uma vez ao lê-los</string>
+    <string name="home_manage">⚙ Gerenciar itens</string>
+    <string name="home_manage_sub">Cadastre ou edite os EPCs da lista</string>
+
+    <!-- Selecionar alvo -->
+    <string name="target_title">Procurar um item</string>
+    <string name="target_scan">⦿ ESCANEAR ETIQUETA</string>
+    <string name="target_scan_hint">Encoste o leitor na etiqueta e puxe o gatilho</string>
+    <string name="target_scan_reading">Lendo…</string>
+    <string name="target_scan_none">Nenhuma etiqueta próxima. Aproxime mais e tente de novo.</string>
+    <string name="target_from_list">OU ESCOLHA DA LISTA</string>
+    <string name="target_list_empty">Nenhum item cadastrado ainda.</string>
+    <string name="target_captured_title">Etiqueta capturada</string>
+    <string name="target_search_now">Procurar</string>
+    <string name="target_save_named">Salvar com nome…</string>
+    <string name="target_name_hint">Nome do item (ex.: Coca-Cola LT-42)</string>
+    <string name="target_saved">Item salvo na lista</string>
+
+    <!-- Localizador (quente/frio) -->
+    <string name="find_title">Localizar item</string>
+    <string name="find_start">▶ INICIAR VARREDURA</string>
+    <string name="find_stop">⏸ PARAR</string>
+    <string name="find_eyebrow">PROCURANDO</string>
+    <string name="find_hint">Puxe o gatilho para varrer</string>
+    <string name="find_focus_label">FOCO — MENOR ALCANCE = MAIS PRECISO</string>
+    <string name="find_focus_value">%1$d de %2$d</string>
+    <string name="find_signal_label">SINAL</string>
+    <string name="find_no_signal">SEM SINAL</string>
+    <string name="find_cold">FRIO</string>
+    <string name="find_warm">MORNO</string>
+    <string name="find_hot">QUENTE</string>
+    <string name="find_here">AQUI!</string>
+</resources>
