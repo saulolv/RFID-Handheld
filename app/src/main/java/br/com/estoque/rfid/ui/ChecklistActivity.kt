@@ -18,6 +18,7 @@ import br.com.estoque.rfid.R
 import br.com.estoque.rfid.data.ItemRepository
 import br.com.estoque.rfid.data.StockItem
 import br.com.estoque.rfid.databinding.ActivityChecklistBinding
+import br.com.estoque.rfid.net.UplinkService
 import br.com.estoque.rfid.rfid.RfidService
 
 class ChecklistActivity : AppCompatActivity() {
@@ -122,7 +123,7 @@ class ChecklistActivity : AppCompatActivity() {
         if (scanning) return
         // Conferência de lote: potência máxima para ler tudo no alcance
         RfidService.getMaxPower().takeIf { it > 0 }?.let { RfidService.setPower(it) }
-        val ok = RfidService.startInventory { epc, _ -> onTagRead(epc) }
+        val ok = RfidService.startInventory { epc, rssi -> onTagRead(epc, rssi) }
         if (!ok) return
         scanning = true
         binding.btToggle.text = getString(R.string.check_stop)
@@ -138,7 +139,7 @@ class ChecklistActivity : AppCompatActivity() {
     }
 
     /** Chega na main thread, EPC já normalizado. Inventário contínuo repete muito: dedup em O(1). */
-    private fun onTagRead(epc: String) {
+    private fun onTagRead(epc: String, rssi: Int) {
         val item = itemsByEpc[epc]
         if (item == null) {
             otherTags.add(epc)
@@ -149,6 +150,7 @@ class ChecklistActivity : AppCompatActivity() {
         foundSet.add(epc)
         itemsByEpc[epc] = item.copy(found = true)
         repository.markFound(epc)
+        UplinkService.sendTagEvent(epc, rssi, "checklist", found = true)
         render()
         adapter.flashItem(binding.recycler, epc)
 

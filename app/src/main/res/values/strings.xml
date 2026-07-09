@@ -42,6 +42,29 @@
     <string name="home_checklist_sub">Marque vários itens de uma vez ao lê-los</string>
     <string name="home_manage">⚙ Gerenciar itens</string>
     <string name="home_manage_sub">Cadastre ou edite os EPCs da lista</string>
+    <string name="home_connection">📡 Conexão</string>
+    <string name="home_connection_sub">Enviar leituras para um servidor</string>
+
+    <!-- Conexão -->
+    <string name="conn_title">Conexão com o servidor</string>
+    <string name="conn_url_label">ENDEREÇO DO SERVIDOR</string>
+    <string name="conn_url_hint">ws://192.168.0.10:8080</string>
+    <string name="conn_device_label">NOME DESTE APARELHO</string>
+    <string name="conn_device_hint">ex.: Coletor-01</string>
+    <string name="conn_token_label">TOKEN (OPCIONAL)</string>
+    <string name="conn_token_hint">enviado como Authorization: Bearer</string>
+    <string name="conn_auto_send">Enviar leituras automaticamente</string>
+    <string name="conn_connect">Conectar</string>
+    <string name="conn_disconnect">Desconectar</string>
+    <string name="conn_test">Enviar teste</string>
+    <string name="conn_wifi">Abrir Wi-Fi do Android</string>
+    <string name="conn_status_disconnected">Desconectado</string>
+    <string name="conn_status_connecting">Conectando…</string>
+    <string name="conn_status_connected">Conectado</string>
+    <string name="conn_status_error">Erro: %1$s</string>
+    <string name="conn_queued">%1$d na fila para envio</string>
+    <string name="conn_test_sent">Mensagem de teste enviada/enfileirada</string>
+    <string name="conn_url_needed">Informe o endereço do servidor primeiro</string>
 
     <!-- Selecionar alvo -->
     <string name="target_title">Procurar um item</string>

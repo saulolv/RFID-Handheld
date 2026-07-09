@@ -15,6 +15,7 @@ import br.com.estoque.rfid.R
 import br.com.estoque.rfid.data.ItemRepository
 import br.com.estoque.rfid.data.StockItem
 import br.com.estoque.rfid.databinding.ActivityTargetSelectBinding
+import br.com.estoque.rfid.net.UplinkService
 import br.com.estoque.rfid.rfid.RfidService
 
 /**
@@ -96,6 +97,7 @@ class TargetSelectActivity : AppCompatActivity() {
     }
 
     private fun onTagCaptured(epc: String) {
+        UplinkService.sendTagEvent(epc, null, "capture", found = false)
         val existing = repository.getItems().firstOrNull { it.epc == epc }
         AlertDialog.Builder(this)
             .setTitle(R.string.target_captured_title)

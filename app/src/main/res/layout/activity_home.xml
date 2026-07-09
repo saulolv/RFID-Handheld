@@ -117,6 +117,50 @@
             android:textSize="14sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/cardConnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_button_surface"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="22dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/home_connection"
+                android:textColor="@color/signal_frost"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConnStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/home_connection_sub"
+                android:textColor="@color/signal_haze"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/connDot"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/bg_dot" />
+    </LinearLayout>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"

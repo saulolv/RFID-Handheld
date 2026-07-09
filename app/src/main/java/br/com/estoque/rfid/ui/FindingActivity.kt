@@ -17,6 +17,7 @@ import androidx.core.graphics.ColorUtils
 import androidx.lifecycle.lifecycleScope
 import br.com.estoque.rfid.R
 import br.com.estoque.rfid.databinding.ActivityFindingBinding
+import br.com.estoque.rfid.net.UplinkService
 import br.com.estoque.rfid.rfid.RfidService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -41,6 +42,7 @@ class FindingActivity : AppCompatActivity() {
     private var toneGenerator: ToneGenerator? = null
     private var lastBeepAt = 0L
     private var locked = false
+    private var lastProximity = 0
 
     private var maxPower = 30
     private var focusPower = DEFAULT_FOCUS
@@ -159,6 +161,7 @@ class FindingActivity : AppCompatActivity() {
     }
 
     private fun renderSignal(proximity: Int) {
+        lastProximity = proximity
         binding.tvSignal.text = proximity.toString()
         binding.root.setBackgroundColor(thermalColor(proximity))
 
@@ -193,6 +196,7 @@ class FindingActivity : AppCompatActivity() {
             binding.lockOverlay.visibility = View.VISIBLE
             binding.lockOverlay.animate().alpha(1f).setDuration(150).start()
             vibrate()
+            UplinkService.sendTagEvent(epc, lastProximity, "finding", found = true)
         } else {
             binding.lockOverlay.animate().alpha(0f).setDuration(200)
                 .withEndAction { binding.lockOverlay.visibility = View.GONE }
